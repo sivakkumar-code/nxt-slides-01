@@ -136,7 +136,7 @@ class App extends Component {
     }
     // console.log(newSlide)
     this.setState(prevState => {
-      const slidesList = prevState.slides
+      const slidesList = [...prevState.slides]
       slidesList.splice(index + 1, 0, newSlide)
 
       return {
